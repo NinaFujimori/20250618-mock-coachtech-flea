@@ -1,0 +1,44 @@
+.login {
+    margin-top: 48px;
+    width: 100%;
+}
+.login__inner{
+    width: 55%;
+}
+.login__form{
+    margin: 15px 0px;
+}
+.login__form-input{
+    width: 100%;
+}
+.login__form-input p {
+    font-weight: bold;
+    line-height: 5px;
+}
+.login__form-input input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+.login__form-error {
+    color: #FF5555;
+}
+.login__button-top {
+    background-color: #FF5555;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    width: 100%;
+    color: white;
+    margin: 50px 0px 25px;
+    padding: 5px;
+}
+
+.login__button-register {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #4D9EDB;
+}

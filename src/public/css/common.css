@@ -1,0 +1,46 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 1% 1fr 1fr;
+    height: 100%; 
+}
+
+.header{
+    background-color: black;
+}
+
+.header__image{
+    grid-column: 1/2;
+    margin: auto;
+}
+
+.header__search {
+    grid-column: 2/3;
+    height: 30px;
+    font-size: 16px;
+}
+
+.header__button {
+    grid-column: 3/4;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+}
+
+.header__button div{
+    margin: 10px;
+}
+
+.header__button-sell{
+    height: 40px;
+    width: 100px;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+}

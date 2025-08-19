@@ -1,0 +1,62 @@
+
+.top__back{
+    width: 100%;
+}
+
+.top__items{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.top__items--card{
+    height: 400px;
+    width: 300px;
+    margin: 25px;
+}
+
+.top__items--card img{
+    height: 300px;
+    width: 300px;
+}
+
+.top__items--card p{
+    display: block;
+    text-decoration: none;
+    color:black;
+}
+
+.top__items--link {
+    position: relative;
+    display: block;
+}
+
+.top__items--link img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 購入済み商品のオーバーレイ */
+.top__items--link.sold img {
+    filter: brightness(50%);
+}
+
+.top__items--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.top__items--sold {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
