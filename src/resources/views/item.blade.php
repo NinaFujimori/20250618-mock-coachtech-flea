@@ -21,33 +21,33 @@
         </div>
 
         <table class="item__mylists">
-            <tr class="item__mylists-image">
+            <tr>
                 <th>
                     @if(Auth::check())
                     <form action="/item/{{ $item->id }}/good" method="POST">
                         @csrf
                         @if($mylist)
                         <button type="submit" style="border:none; background:none; padding:0;">
-                            <img src="{{ asset('storage/image/mylistDone.png') }}" alt="いいね済" >
+                            <img src="{{ asset('storage/image/mylistDone.png') }}" alt="いいね済" class="item__mylists-image">
                         </button>
                         @else
                         <button type="submit" style="border:none; background:none; padding:0;">
-                            <img src="{{ asset('storage/image/mylistEmpty.png') }}" alt="いいね未">
+                            <img src="{{ asset('storage/image/mylistEmpty.png') }}" alt="いいね未" class="item__mylists-image">
                         </button>
                         @endif
                     </form>
                     @else
                     <label for="">
                         <a href="{{ route('login') }}">
-                        <img src="{{ asset('storage/image/mylistEmpty.png') }}" alt="いいね未">
+                        <img src="{{ asset('storage/image/mylistEmpty.png') }}" alt="いいね未" class="item__mylists-image">
                     </label>
                     @endif
                 </th>
                 <th>
                     @if($myComment)
-                    <img src="{{ asset('storage/image/commentDone.png') }}" alt="コメント済">
+                    <img src="{{ asset('storage/image/commentDone.png') }}" alt="コメント済" class="item__mylists-image">
                     @else
-                    <img src="{{ asset('storage/image/commentEmpty.png') }}" alt="コメント未">
+                    <img src="{{ asset('storage/image/commentEmpty.png') }}" alt="コメント未" class="item__mylists-image">
                     @endif
                 </th>
             </tr>
@@ -66,20 +66,19 @@
             <p>{{$item -> description}}</p>
         </div>
 
-
         <div class="item__description">
             <h2 class="item__title">商品の情報</h2>
             <div>
-                <h3>カテゴリー</h3>
+                <h3 class="item__title-info">カテゴリー</h3>
                 @forelse( $categories as $category)
-                    <p>{{ $category->category }}</p>
+                    <p class="item__category">{{ $category->category }}</p>
                 @empty
                     <p>カテゴリーは設定されていません。</p>
                 @endforelse
             </div>
 
             <div>
-                <h3>商品の状態</h3>
+                <h3 class="item__title-info">商品の状態</h3>
                 @switch($item -> condition)
                     @case(0)
                         <p>良好</p>
@@ -100,12 +99,14 @@
         </div>
 
         <div>
-            <h2>コメント<span>({{ $commentCount }})</span></h2>
+            <div class="item__title-comment">
+                <h2>コメント<span>({{ $commentCount }})</span></h2>
+            </div>
 
             <div>
                 @foreach($comments as $comment)
-                    <div>
-                        <img src="{{ asset('storage/' . $comment ->user ->profile -> image) }}" alt="">
+                    <div class="item__comment">
+                        <img src="{{ asset('storage/' . $comment ->user ->profile -> image) }}" alt="" >
                         <p>{{$comment -> user -> name}}</p>
                         <p>{{$comment -> comment}}</p>
                     </div>

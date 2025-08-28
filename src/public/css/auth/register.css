@@ -4,6 +4,7 @@
 }
 .register__inner{
     width: 60%;
+    margin: auto;
 }
 .register__form{
     margin: 15px 0px;
@@ -12,7 +13,7 @@
     width:100%;
 }
 .register__form-input p{
-    font-weight:bold;
+    font-weight: bold;
     line-height: 5px;
 }
 .register__form-input input{
