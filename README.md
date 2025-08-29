@@ -2,8 +2,8 @@
 
 ## 環境構築
 **Dockerビルド**
-1. git@github.com:NinaFujimori/20250618-mock-coachtech-flea.git
-2. cd coachtech-flea
+1. git clone git@github.com:NinaFujimori/20250618-mock-coachtech-flea.git
+2. cd 20250618-mock-coachtech-flea
 3. DockerDesktopアプリを立ち上げる
 4. `docker-compose up -d --build`
 
